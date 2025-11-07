@@ -1,0 +1,20 @@
+nav {
+  background-color: blueviolet;
+  padding: 1rem;
+}
+
+a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+  cursor: pointer;
+  transition: color 120ms ease-in-out;
+}
+
+a.active{
+  color: aqua;
+}
