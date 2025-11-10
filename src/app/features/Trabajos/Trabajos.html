@@ -1,1 +1,4 @@
-<p>Trabajos works!</p>,
+<div>
+  <app-list-manager (newProyecto)="proyectosService.addValue($event)" />
+  <app-listado-proyectos [list]="proyectosService.proyectos()" listName="Name" />
+</div>

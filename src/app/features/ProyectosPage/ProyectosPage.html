@@ -1,4 +1,3 @@
-<h1>Proyectos</h1>
 
 <section>
   <div>
@@ -22,15 +21,20 @@
     <button (click)="addValue()">Agregar</button>
   </div>
   <div>
-    <div>
-      <h3>Listado</h3>
-      <ul>
-        <!-- <li>Proyecto 1</li>
+  <div>
+    <h3>
+      Listado
+    </h3>
+
+    <ul>
+      <!-- <li>Proyecto 1</li>
             <li>Proyecto 2</li> -->
-        @for (proyecto of proyectos(); track $index) {
-        <li>{{ proyecto.id }} - {{ proyecto.name }} - {{ proyecto.description }}</li>
-        }
-      </ul>
-    </div>
+      @for (proyecto of proyectos(); track $index) {
+      <li>{{ proyecto.id }} - {{ proyecto.name }} - {{ proyecto.description }}</li>
+      }
+    </ul>
   </div>
+</div>
+
+  <app-listado-proyectos listName='Proyectos' [list]="proyectos()"/>
 </section>
