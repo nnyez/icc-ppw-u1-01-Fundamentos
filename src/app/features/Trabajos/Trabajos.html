@@ -1,4 +1,6 @@
 <div>
-  <app-list-manager (newProyecto)="proyectosService.addValue($event)" />
+  <app-list-manager (newProyecto)="proyectosService.addValue($event)" 
+  (removeListener)="proyectosService.removeValue()"
+  />
   <app-listado-proyectos [list]="proyectosService.proyectos()" listName="Name" />
 </div>

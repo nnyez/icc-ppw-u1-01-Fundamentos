@@ -19,17 +19,22 @@ export class ListManager {
   description = signal('');
 
   newProyecto = output<ProyectoInterface>();
+  removeListener = output<string>();
 
   addValue() {
     const newProyecto: ProyectoInterface = {
       id:0,
       description: this.name(),
-      name: this.name(),
+      name: this.description(),
     };
 
     this.newProyecto.emit(newProyecto);
 
     this.name.set('');
     this.description.set('');
+  }
+
+  removeValue(){
+    this.removeListener.emit(this.name());
   }
 }
