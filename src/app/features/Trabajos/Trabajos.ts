@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ProyectosService } from './services/proyectos-service';
-import { ListManager } from "./components/ListManager/ListManager";
+import { AdministradorProyectos } from "./components/ListManager/administrador-proyectos";
 import { ListadoProyectos } from '../ProyectosPage/components/listado-proyectos/listado-proyectos';
 
 @Component({
   selector: 'app-trabajos',
-  imports: [ListadoProyectos, ListManager],
+  imports: [ListadoProyectos, AdministradorProyectos],
   templateUrl: './Trabajos.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

@@ -4,10 +4,10 @@ import { ProyectosService } from '../../services/proyectos-service';
 @Component({
   selector: 'app-list-manager',
   imports: [],
-  templateUrl: './ListManager.html',
+  templateUrl: './administrador-proyectos.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ListManager {
+export class AdministradorProyectos {
 
   changeName(value: string) {
     this.name.set(value);

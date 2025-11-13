@@ -27,8 +27,6 @@
     </h3>
 
     <ul>
-      <!-- <li>Proyecto 1</li>
-            <li>Proyecto 2</li> -->
       @for (proyecto of proyectos(); track $index) {
       <li>{{ proyecto.id }} - {{ proyecto.name }} - {{ proyecto.description }}</li>
       }

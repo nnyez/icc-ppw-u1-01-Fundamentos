@@ -9,5 +9,4 @@ import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core
 export class ListadoProyectos {
   listName = input.required<string>();
   list = input.required<ProyectoInterface[]>();
-
 }

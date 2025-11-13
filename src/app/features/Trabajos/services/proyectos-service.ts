@@ -22,13 +22,7 @@ export class ProyectosService {
   removeValue() {
     this.proyectos.set(this.proyectos().slice(1));
   }
-  // removeValueName(name: string) {
-  //   let p = this.proyectos().
-  //   this.proyectos().map((p) => {
-  //     if (p.name == name) {
-  //     }
-  //   });
-  // }
+
   proyectos = signal<ProyectoInterface[]>(this.loadProyectos());
 
   private loadProyectos(): ProyectoInterface[] {
