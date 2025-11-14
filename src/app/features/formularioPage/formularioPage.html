@@ -1,0 +1,43 @@
+<!-- <form [formGroup]="formulario">
+    <input  formControlName="nombre" placeholder="Nombre"/>
+    <input  formControlName="email" placeholder="correo"/>
+</form> -->
+
+<div>
+  <div>
+    <form autocomplete="off" [formGroup]="myform" (ngSubmit)="onSubmit()">
+      <div>
+        <div>
+          <label>nombre</label>
+          <div>
+            <input type="text" placeholder="Nombre del usuario" formControlName="nombre" />
+            @if(isValidField("nombre")){
+                <p>{{getFieldError("nombre")}}</p>
+            }
+          </div>
+        </div>
+        <div>
+          <label>edad</label>
+          <div>
+            <input type="number" placeholder="Edad del usuario" formControlName="edad" />
+            @if(isValidField("edad")){
+                <p>{{getFieldError("edad")}}</p>
+            }
+          </div>
+        </div>
+        <div>
+          <label>correo</label>
+          <div>
+            <input type="text" placeholder="Email del usuario" formControlName="correo" />
+            @if(isValidField("correo")){
+                <p>{{getFieldError("correo")}}</p>
+            }
+          </div>
+        </div>
+        <div>
+          <button>Guardar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

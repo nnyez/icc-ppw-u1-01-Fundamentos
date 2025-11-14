@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
 import { HomePage } from './features/homePage/homePage';
 import { PerfilPage } from './features/perfilPage/perfilPage';
-import { Trabajos } from './features/Trabajos/Trabajos';
+import { Trabajos as TrabajosPage } from './features/Trabajos/TrabajosPage';
 import { ProyectosPage } from './features/ProyectosPage/ProyectosPage';
+import { FormularioPage } from './features/formularioPage/formularioPage';
 
 export const routes: Routes = [
   {
@@ -15,10 +16,14 @@ export const routes: Routes = [
   },
   {
     path: 'trabajos',
-    component: Trabajos,
+    component: TrabajosPage,
   },
   {
     path: 'proyectos',
     component: ProyectosPage,
+  },
+  {
+    path: 'formulario',
+    component: FormularioPage,
   },
 ];

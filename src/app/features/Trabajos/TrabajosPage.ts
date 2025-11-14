@@ -6,7 +6,7 @@ import { ListadoProyectos } from '../ProyectosPage/components/listado-proyectos/
 @Component({
   selector: 'app-trabajos',
   imports: [ListadoProyectos, AdministradorProyectos],
-  templateUrl: './Trabajos.html',
+  templateUrl: './TrabajosPage.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Trabajos {
