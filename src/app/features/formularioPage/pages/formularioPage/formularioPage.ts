@@ -21,14 +21,11 @@ export class FormularioPage {
       return;
     }
     console.log('Datos del formulario', this.myform.value);
+    alert('Formulario enviado correctamente');
     this.myform.reset();
   }
-  private fb = inject(FormBuilder);
 
-  // formulario = new FormGroup({
-  //   nombre:new FormControl(''),
-  //   email:new FormControl(''),
-  // })
+  private fb = inject(FormBuilder);
 
   isValidField(fieldName: string) {
     return this.myform.controls[fieldName].errors && this.myform.controls[fieldName].touched;
@@ -50,7 +47,6 @@ export class FormularioPage {
         case 'email':
           return 'Formato de correo invalido';
       }
-      
     }
     return null;
   }

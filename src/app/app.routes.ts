@@ -3,7 +3,8 @@ import { HomePage } from './features/homePage/homePage';
 import { PerfilPage } from './features/perfilPage/perfilPage';
 import { Trabajos as TrabajosPage } from './features/Trabajos/TrabajosPage';
 import { ProyectosPage } from './features/ProyectosPage/ProyectosPage';
-import { FormularioPage } from './features/formularioPage/formularioPage';
+import { FormularioPage } from './features/formularioPage/pages/formularioPage/formularioPage';
+import { formulariosRoutes } from './features/formularioPage/formularios-routes';
 
 export const routes: Routes = [
   {
@@ -24,6 +25,7 @@ export const routes: Routes = [
   },
   {
     path: 'formulario',
-    component: FormularioPage,
+    loadChildren: () =>
+      import('./features/formularioPage/formularios-routes').then((m) => m.formulariosRoutes),
   },
 ];
